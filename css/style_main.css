@@ -397,7 +397,7 @@ html, body {
 	background:#9ed100;
 }*/
 
-.sec_one{background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),url(../images/back-1.png);}
+.sec_one{background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),url(../images/firstpage.jpeg);}
 .sec_two{background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../images/tre.jpg);}
 .sec_three{background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),url(../images/sec_theeeee.jpg); text-align:center; color:#fff;}
 /*.sec_four{background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_9857.jpg');}
