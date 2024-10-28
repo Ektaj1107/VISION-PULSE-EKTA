@@ -1,0 +1,183 @@
+/* Blink Detection Section */
+.blink-detection {
+    background: linear-gradient(145deg, #1a4a5e 0%, #0d2b36 100%);
+    padding: 60px 0;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blink-detection h1 {
+    color: #4db8e8;
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.blink-detection p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #e6f3f8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.blink-instructions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blink-instructions-text {
+    flex: 1;
+    padding: 30px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    margin-right: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.blink-instructions-text h2 {
+    color: #4db8e8;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.blink-instructions-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e6f3f8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.left-container {
+    position: relative; 
+    top: 100px;  /*  Calculated based on heights */
+    transform: translateY(0); /*  No need to translate now */
+    height: calc(100vh - 120px);  /*  Adjust as needed */
+}
+#blink-detection-container {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#videoContainer {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#video {
+    width: 100%;
+    max-width: 640px;
+    height: 480px;
+    background-color: #000;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#blink-display {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    background-color: rgba(77, 184, 232, 0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#start-btn {
+    background: linear-gradient(145deg, #4db8e8 0%, #3498db 100%);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    pointer-events: auto; /* Ensure the button is clickable */
+    z-index: 999;         /* Bring it to the front */
+    }
+
+
+#start-btn:hover {
+    background: linear-gradient(145deg, #3498db 0%, #2980b9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+#blink-count {
+    font-size: 28px;
+    color: #4db8e8;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .blink-instructions {
+        flex-direction: column;
+    }
+    
+    .blink-instructions-text {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    #blink-detection-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .blink-detection h1 {
+        font-size: 32px;
+    }
+
+    .blink-instructions-text h2 {
+        font-size: 24px;
+    }
+
+    .blink-detection p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    #video {
+        height: auto;
+        min-height: 300px;
+    }
+
+    #start-btn {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+    
+    #blink-display {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
