@@ -103,6 +103,8 @@ def detect_blinks():
 def get_blink_count():
     global TOTAL_BLINKS
     try:
+        blink_count=TOTAL_BLINKS
+        TOTAL_BLINKS=0
         return jsonify({'blinks_per_minute': TOTAL_BLINKS})
     except Exception as e:
         print(f"Error: {str(e)}")

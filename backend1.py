@@ -29,12 +29,15 @@ def eye_aspect_ratio(eye):
     return ear
 
 # Flask route to stream video and perform blink detection
+# Flask route to stream video and perform blink detection
 @app.route('/detect_blinks')
 def detect_blinks():
     global TOTAL_BLINKS, COUNTER
 
     def generate_frames():
         global TOTAL_BLINKS, COUNTER
+        TOTAL_BLINKS = 0  # Reset blink count at the start of each new video stream
+        COUNTER = 0       # Also reset the counter for a fresh start
         cap = cv2.VideoCapture(0)
         start_time = time.time()
 
@@ -87,12 +90,14 @@ def detect_blinks():
 
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+
 # Route to get the total blink count
 @app.route('/get_blink_count')
 def get_blink_count():
     global TOTAL_BLINKS
     try:
-        return jsonify({'blinks_per_minute': TOTAL_BLINKS})
+        blink_count=TOTAL_BLINKS
+        return jsonify({'blinks_per_minute': blink_count})
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({'error': 'Internal Server Error'}), 500
