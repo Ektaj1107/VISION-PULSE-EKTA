@@ -1,0 +1,34 @@
+.footer {
+    background-color: #03222c; /* Dark background color */
+    color: #f8f9fa; /* Light text color for contrast */
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center align text */
+    position: relative; /* Ensure it positions relative to other content */
+    bottom: 0; /* Keep it at the bottom */
+    width: 100%; /* Full width */
+}
+
+.footer-content {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.footer h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 24px; /* Font size for the heading */
+}
+
+.footer p {
+    font-size: 16px; /* Font size for the paragraph */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+@media (max-width: 600px) {
+    .footer h2 {
+        font-size: 20px; /* Smaller heading size on mobile */
+    }
+    
+    .footer p {
+        font-size: 14px; /* Smaller paragraph size on mobile */
+    }
+}

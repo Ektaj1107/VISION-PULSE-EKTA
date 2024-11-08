@@ -9,7 +9,7 @@ import wget
 import time
 from flask_cors import CORS
 
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)
 
 # Initialize global variables
@@ -108,5 +108,5 @@ def get_blink_count():
         print(f"Error: {str(e)}")
         return jsonify({'error': 'Internal Server Error'}), 500
 
-if _name_ == '_main_':
+if __name__ == '__main__':  # Corrected this line
     app.run(debug=True)
