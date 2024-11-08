@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let blinkFetchInterval;
     let timerInterval;
 
+    const backendURL = 'https://backend-6-wyp8.onrender.com';  // Update this with your backend URL
+
     // Function to fetch the actual blink count from the server
     async function fetchBlinkCount() {
         try {
-            const response = await fetch('http://127.0.0.1:5000/get_blink_count', {
+            const response = await fetch(`${backendURL}/get_blink_count`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const data = await response.json();
             blinkCount = data.blinks_per_minute || 0; // Ensure blinkCount is a number
+            console.log(blinkCount)
             blinkDisplay.innerText = `Blinks: ${blinkCount}`;
             blinkCountDisplay.innerText = `Blink count: ${blinkCount}`;
         } catch (error) {
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to start blink detection
     async function startBlinkDetection() {
         try {
-            const response = await fetch('http://127.0.0.1:5000/detect_blinks', {
+            const response = await fetch(`${backendURL}/detect_blinks`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

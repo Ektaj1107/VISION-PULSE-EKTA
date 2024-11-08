@@ -1030,12 +1030,21 @@ data-dismiss="modal"
 
             <div id="blink-detection-container">
               <div id="videoContainer">
+                <!-- Video element that displays the webcam feed -->
                 <video id="video" width="640" height="480" autoplay class="img-responsive"></video>
-                <div id="blink-display" style="color: #fff;">Blinks: 0</div>
-                <div id="timer-display" style="color: #fff; font-size: 18px; margin-top: 10px;"></div>
+                
+                <!-- Blink count display -->
+                <div id="blink-display" style="color: black; font-size: 20px; font-weight: bold;">Blinks: 0</div>
+
+                <!-- Timer display -->
+                <div id="timer-display" style="color: black; font-size: 18px; margin-top: 10px;"></div>
               </div>
-              <button id="start-btn" type="button">Calculate your blinks</button>
-              <div id="blink-count" style="font-size: 24px; color: #fff; font-weight: bold; margin-top: 10px;">Blink count: 0</div>
+
+              <!-- Start button -->
+              <button id="start-btn" type="button" style="margin-top: 10px;">Calculate your blinks</button>
+              
+              <!-- Blink count text -->
+              <div id="blink-count" style="font-size: 24px; color: black; font-weight: bold; margin-top: 10px;">Blink count: 0</div>
           </div>
         </div>
     </div>
